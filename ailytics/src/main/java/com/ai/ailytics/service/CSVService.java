@@ -39,7 +39,7 @@ public class CSVService {
                     value = value.toLowerCase();
                 }
 
-                rowMap.put(header, value);
+                rowMap.put(header.toLowerCase(), value);
             }
 
             dataList.add(new DataRow(rowMap));
