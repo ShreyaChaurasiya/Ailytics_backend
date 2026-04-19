@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
 public class HelloController {
@@ -29,5 +28,11 @@ public class HelloController {
             @RequestParam String groupBy,
             @RequestParam String value) {
         return service.groupBySum(groupBy, value);
+    }
+
+    // ✅ ADD THIS (VERY IMPORTANT FOR TESTING)
+    @GetMapping("/hello")
+    public String hello() {
+        return "Backend connected successfully 🚀";
     }
 }
